@@ -34,7 +34,7 @@ const timerStartBtn = document.querySelector('#timer-start')
 const timerStopBtn = document.querySelector('#timer-stop')
 
 timerStartBtn.addEventListener('click', () => {
-    let time = timer.value*60/10
+    let time = timer.value*60
     timerFunc(time)
 })
 
