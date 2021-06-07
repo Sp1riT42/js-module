@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datetime superapp</title>
+    <script src="./src/main.js" type="module"></script>
+    <script defer src="./src/loadScript.js"></script>
+</head>
+<style>
+    .active {
+        background-color: #e8e8e8;
+    }
+    .hide {
+        display: none;
+    }
+    .tab-list {
+        display: flex;
+        list-style: none;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .tab {
+        padding: 12px;
+        cursor: pointer;
+    }
+    .tab:not(:last-child) {
+        margin-right: 12px;
+    }
+</style>
+<body>
+    <ul class="tab-list">
+        <li class="tab active" id="one">Калькулятор дат</li>
+        <li class="tab" id="two">Таймер</li>
+    </ul>
+    <div class="app">
+        <form id="datecalc">
+            <h3>Калькулятор дат</h3>
+            <label>
+                <strong>Первая дата:</strong>
+                <input type="date" name="firstDate" />
+            </label>
+            <label>
+                <strong>Вторая дата:</strong>
+                <input type="date" name="secondDate" />
+            </label>
+            <button type="submit">Расчитать промежуток</button>
+            <p id="datecalc__result"></p>
+        </form>
+    </div>
+    <div class="app hide">
+        <p class="timer__text">Таймер: <span id="timer-result">0:00:00</span></p>
+        <input type="text" id="timer-time">
+        <button id="timer-start">Старт</button>
+        <button id="timer-stop">Стоп</button>
+    </div>
+
+</body>
+
+</html>
